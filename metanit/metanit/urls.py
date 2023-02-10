@@ -1,10 +1,10 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from hello import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('about', views.about),
-    path('contact', views.contact),
+    re_path(r'^about', views.about, kwargs={"name":"Maks", "age": 38}),
+    re_path(r'^contact', views.contact),
     path('admin/', admin.site.urls),
 ]
