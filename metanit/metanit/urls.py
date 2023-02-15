@@ -5,6 +5,7 @@ from django.urls import path, re_path
 from hello import views
 
 urlpatterns = [
+    path('index', views.index),
     # re_path позволяет задать адреса URL с помощью регулярных выражений.
     # view: функция-представление, которое обрабатывает запрос
     # kwargs: дополнительные аргументы, которые передаются в функцию-представление
